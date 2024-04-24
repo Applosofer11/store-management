@@ -20,12 +20,13 @@ public class StoreApplication {
 	}
 
 	@Bean
-	public ApplicationRunner save() {
+	public ApplicationRunner dataLoader() {
 		return args -> {
 			repo.save(new Product("Gizmo", 19, "Gadgets", 200));
 			repo.save(new Product("Powergizmo", 29, "Gadgets", 203));
 			repo.save(new Product("SingleTouch", 149, "Photography", 199));
 			repo.save(new Product("MultiTouch", 203, "Household", 342));
+			repo.save(new Product("Monitor", 234, "Office", 111));
 		};
 	}
 }
